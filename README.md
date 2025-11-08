@@ -55,5 +55,68 @@ int main() {
         scanf("%d", &choice);
 
 
+     switch (choice) {
+            case 1:
+                printf("Enter amount in USD: ");
+                scanf("%lf", &amount);
+                converted = amount * USD_to_BDT;
+                printf("Result: %.2f USD = %.2f BDT\n", amount, converted);
+                recordHistory(amount, converted, "USD", "BDT");
+                break;
 
+            case 2:
+                printf("Enter amount in BDT: ");
+                scanf("%lf", &amount);
+                converted = amount / USD_to_BDT;
+                printf("Result: %.2f BDT = %.2f USD\n", amount, converted);
+                recordHistory(amount, converted, "BDT", "USD");
+                break;
+
+            case 3:
+                printf("Enter amount in EUR: ");
+                scanf("%lf", &amount);
+                converted = amount * EUR_to_BDT;
+                printf("Result: %.2f EUR = %.2f BDT\n", amount, converted);
+                recordHistory(amount, converted, "EUR", "BDT");
+                break;
+
+            case 4:
+                printf("Enter amount in BDT: ");
+                scanf("%lf", &amount);
+                converted = amount / EUR_to_BDT;
+                printf("Result: %.2f BDT = %.2f EUR\n", amount, converted);
+                recordHistory(amount, converted, "BDT", "EUR");
+                break;
+
+            case 5:
+                printf("Enter amount in INR: ");
+                scanf("%lf", &amount);
+                converted = amount * INR_to_BDT;
+                printf("Result: %.2f INR = %.2f BDT\n", amount, converted);
+                recordHistory(amount, converted, "INR", "BDT");
+                break;
+
+            case 6:
+                printf("Enter amount in BDT: ");
+                scanf("%lf", &amount);
+                converted = amount / INR_to_BDT;
+                printf("Result: %.2f BDT = %.2f INR\n", amount, converted);
+                recordHistory(amount, converted, "BDT", "INR");
+                break;
+
+            case 7:
+                showHistory();
+                break;
+
+            case 8:
+                printf("\nThank you for using Currency Converter!\n");
+                exit(0);
+
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    }
+
+    return 0;
+}
            
