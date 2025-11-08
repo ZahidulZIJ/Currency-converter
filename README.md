@@ -55,10 +55,5 @@ int main() {
         scanf("%d", &choice);
 
         switch (choice) {
-            case 1:
-                printf("Enter amount in USD: ");
-                scanf("%lf", &amount);
-                converted = amount * USD_to_BDT;
-                printf("Result: %.2f USD = %.2f BDT\n", amount, converted);
-                recordHistory(amount, converted, "USD", "BDT");
-                break;
+
+           
