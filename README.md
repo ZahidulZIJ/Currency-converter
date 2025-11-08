@@ -54,6 +54,6 @@ int main() {
         printf("Choose an option: ");
         scanf("%d", &choice);
 
-        switch (choice) {
+
 
            
